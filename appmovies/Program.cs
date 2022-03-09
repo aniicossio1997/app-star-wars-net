@@ -3,9 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<StartwarsDb>(options => options.UseInMemoryDatabase("Startwars"));
+builder.Services.AddDbContext<StartwarsDb>(options => options.UseInMemoryDatabase("startwars"));
 
 var app = builder.Build();
 

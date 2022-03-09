@@ -9,19 +9,25 @@ namespace appmovies.Models
         public StartwarsDb()
         {
         }
+
         public StartwarsDb(DbContextOptions<StartwarsDb> options) : base(options)
         {
 
         }
+        /*
+       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+       {
+           optionsBuilder.UseInMemoryDatabase("Startwars");
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseInMemoryDatabase("Startwars");
-               //optionsBuilder.UseSqlServer("Server=.;Database=Startwars;Trusted_Connection=True");
-            
-            }
-        }
+
+           if (!optionsBuilder.IsConfigured)
+           {
+               optionsBuilder.UseInMemoryDatabase("Startwars");
+              //optionsBuilder.UseSqlServer("Server=.;Database=Startwars;Trusted_Connection=True");
+
+           }
+
+       } */
+
     }
 }
